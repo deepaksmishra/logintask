@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+
+
+  <title>Site</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}" />
+</head>
+<body>
+  <div class="wrapper login">
+    <div class="container">
+        <div class="col-left">
+            <div class="login-text">
+                <h2>Welcome to the small app for file upload</h2>
+                <p>Please login to<br></p>
+                
+            </div>
+        </div>
+
+        <div class="col-right">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form action="{%url 'login' %}" method="post">{% csrf_token %}
+                    <p>
+                        <label>Username or email address<span>*</span></label>
+                        <input type="text" placeholder="Username or Email" id="username" name="username" required>
+                    </p>
+                    <p>
+                        <label>Password<span>*</span></label>
+                        <input type="password" placeholder="Password" id="password" name="password" required>
+                    </p>
+                    <p>
+                        <input type="submit" value="Sign In">
+                    </p>
+                    
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+  
+
+</body>
+</html>

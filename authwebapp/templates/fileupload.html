@@ -1,0 +1,15 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+
+
+  <title>Site</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/fileupload.css'%}" />
+  <link rel="javascript" type="script" href="{% static 'main.js'%}" />
+
+<form action="showdata" method="POST">
+    <input type="file" multiple>
+    <p>Drag your files here or click in this area.</p>
+    <button type="submit">Upload</button>
+  </form>
